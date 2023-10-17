@@ -17,8 +17,6 @@ func main() {
 }
 
 func Home(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "/home", http.StatusFound)
-
 		err := home.Execute(w, nil)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
