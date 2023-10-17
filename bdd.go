@@ -2,6 +2,7 @@ package back
 
 import (
 	"database/sql"
+	"fmt"
 	"log"
 
 	_ "github.com/mattn/go-sqlite3"
@@ -29,6 +30,7 @@ func InitBDD() {
 	`
 	_, bdderr := database.Exec(bdd)
 	if bdderr != nil {
+		fmt.Println("ee")
 		log.Fatal(bdderr.Error())
 	}
 }
